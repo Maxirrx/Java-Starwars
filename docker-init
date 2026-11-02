@@ -1,0 +1,8 @@
+docker run -it -d \
+  --name postgres-db \
+  -e POSTGRES_PASSWORD=youshouldnotpass \
+  -e POSTGRES_USER=api \
+  -e POSTGRES_DB=fleet \
+  -p 5433:5432 \
+  -v postgres-fleet-data:/var/lib/postgresql \
+  postgres:18 
